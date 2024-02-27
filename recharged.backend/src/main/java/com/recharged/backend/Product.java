@@ -5,17 +5,15 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-// will be both customers and admins for now
-
 @Entity
-public class User {
+public class Product {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
 
     private String name;
 
-    private String email;
+    private Integer price;
 
     public Integer getId() {
         return id;
@@ -33,11 +31,11 @@ public class User {
         this.name = name;
     }
 
-    public String getEmail() {
-        return email;
+    public Integer getPrice() {
+        return price;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setPrice(Integer price) {
+        this.price = price;
     }
 }
