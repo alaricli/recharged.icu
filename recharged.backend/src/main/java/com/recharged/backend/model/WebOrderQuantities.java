@@ -1,6 +1,5 @@
 package com.recharged.backend.model;
 
-import com.recharged.backend.Product;
 import jakarta.persistence.*;
 
 @Entity
