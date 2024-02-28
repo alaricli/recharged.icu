@@ -1,6 +1,7 @@
 package com.recharged.backend.service;
 
 import com.recharged.backend.api.model.RegistrationBody;
+import com.recharged.backend.exception.UserAlreadyExistException;
 import com.recharged.backend.model.LocalUser;
 import com.recharged.backend.model.repository.LocalUserRepository;
 import org.springframework.stereotype.Service;
@@ -14,7 +15,11 @@ public class UserService {
         this.localUserRepository = localUserRepository;
     }
 
-    public LocalUser registerUser(RegistrationBody registrationBody) {
+    public LocalUser registerUser(RegistrationBody registrationBody) throws UserAlreadyExistException {
+        if (localUserRepository.findByEmailIgnoreCase(registrationBody.getEmail()).isPresent() ||
+                localUserRepository.findByUsernameIgnoreCase(registrationBody.getUsername()).isPresent()) {
+            throw new UserAlreadyExistException();
+        };
         LocalUser user = new LocalUser();
         user.setEmail(registrationBody.getEmail());
         user.setFirstName(registrationBody.getFirstName());
