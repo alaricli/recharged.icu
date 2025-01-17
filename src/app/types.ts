@@ -1,0 +1,23 @@
+export type Product = {
+  id: number;
+  name: string;
+  vendor: string;
+  condition: string;
+  description: string;
+  originalPackage: boolean;
+  notes: string;
+  category: string;
+  subCategory: string;
+  blurb: string;
+  cost: number;
+  price: number;
+  promotionPrice: number;
+  stock: number;
+  itemNumber: string;
+  upc: string;
+  modelNumber: string;
+  serialNumber: string;
+  productImage: string;
+  tags: string[];
+  productImages: string[];
+};
