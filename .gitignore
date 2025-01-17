@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+
+# Build Output
+.next/
+out/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment Files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Editor Directories and Files
+.idea/
+.vscode/
+*.swp
+
+# MacOS Files
+.DS_Store
+
+# Miscellaneous
+*.log
+*.lock
+coverage/
+*.sqlite
+*.sqlite-journal
+
+# TypeScript Build Output
+*.tsbuildinfo
+
+# Debug Files
+*.stacktrace
