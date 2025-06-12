@@ -59,7 +59,7 @@ const Navbar: React.FC = () => {
                 }}
                 className="hover:underline hover:text-blue-500"
               >
-                PC Components
+                iPhone
               </Link>
             </li>
             <li>
@@ -70,7 +70,7 @@ const Navbar: React.FC = () => {
                 }}
                 className="hover:underline hover:text-blue-500"
               >
-                Systems
+                MacBook
               </Link>
             </li>
             <li>
